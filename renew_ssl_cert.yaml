@@ -30,7 +30,7 @@ blueprint:
         selector:
             boolean:
         default: true
-    minuts_till_restart:
+    minutes_till_restart:
         name: Minutes until restart
         description: Minutes until restart of Home Assistant if restart is enabled
         selector:
@@ -88,7 +88,7 @@ action:
       sequence:
         - delay:
               hours: 0
-              minutes: !input minuts_till_restart
+              minutes: !input minutes_till_restart
               seconds: 0
               milliseconds: 0
         - service: hassio.host_reboot
